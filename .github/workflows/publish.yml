@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   Release:
-    if: github.repository == 'CollaborativeStateMachines/cirrina-helm.github.io'
+    if: github.repository == 'CollaborativeStateMachines/Cirrina-Helm'
     name: Release
     permissions:
       contents: write
