@@ -5,6 +5,8 @@ on:
       - main
 jobs:
   Release:
+    if: github.repository == 'CollaborativeStateMachines/Cirrina-Helm'
+    name: Release
     permissions:
       contents: write
     runs-on: ubuntu-latest
