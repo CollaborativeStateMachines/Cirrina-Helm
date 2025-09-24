@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  cirrina:
+  - apiVersion: v2
+    created: "2025-09-24T13:46:13.15245147Z"
+    description: Helm chart for deploying Cirrina
+    digest: 263b57e4839898e06db7f28872dcfe91a09d47e47c88ccb590a6813163740173
+    name: cirrina
+    type: application
+    urls:
+    - https://github.com/CollaborativeStateMachines/cirrina-helm.github.io/releases/download/cirrina-0.1.0/cirrina-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-09-24T13:46:13.152456209Z"
