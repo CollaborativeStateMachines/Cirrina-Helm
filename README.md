@@ -1,15 +1,10 @@
-# Cirrina Helm Charts
-
-This repository contains the [Cirrina](https://github.com/CollaborativeStateMachines/Cirrina)
-Helm charts.
-
 ## Cirrina
 
-The [Cirrina Helm chart](charts/cirrina) deploys Cirrina.
+The [Cirrina Helm chart](https://github.com/CollaborativeStateMachines/Cirrina-Helm/tree/main/charts/cirrina) deploys Cirrina.
 
 ### Values
 
-For values, see [values.yaml](charts/cirrina/values.yaml).
+For values, see [values.yaml](https://github.com/CollaborativeStateMachines/Cirrina-Helm/blob/main/charts/cirrina/values.yaml).
 
 An example `values.yaml` file is as follows:
 
