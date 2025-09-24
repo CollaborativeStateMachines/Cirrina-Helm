@@ -1,5 +1,8 @@
 # Cirrina Helm Charts
 
+This repository contains the [Cirrina](https://github.com/CollaborativeStateMachines/Cirrina)
+Helm charts.
+
 ## Cirrina
 
 The [Cirrina Helm chart](charts/cirrina) deploys Cirrina.
