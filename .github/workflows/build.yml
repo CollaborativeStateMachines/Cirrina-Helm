@@ -1,0 +1,14 @@
+name: Build
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  Build:
+    if: github.repository == 'CollaborativeStateMachines/Cirrina-Helm'
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Perform commit linting
+        uses: wagoid/commitlint-github-action@v6
