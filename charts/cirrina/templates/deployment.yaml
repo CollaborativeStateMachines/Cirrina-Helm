@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: {{ include "cirrina.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
 spec:
-  replicas: {{ .Values.cirrina.replicaCount }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "cirrina.name" . }}
@@ -20,19 +20,19 @@ spec:
     spec:
       containers:
         - name: cirrina
-          image: "{{ .Values.cirrina.image.repository }}:{{ .Values.cirrina.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
           env:
             - name: APP_PATH
-              value: {{ .Values.cirrina.appPath | quote }}
+              value: {{ .Values.appPath | quote }}
             - name: SERVICE_BINDINGS_PATH
-              value: {{ .Values.cirrina.serviceBindingsPath | quote }}
+              value: {{ .Values.serviceBindingsPath | quote }}
             - name: INSTANTIATE
-              value: {{ .Values.cirrina.instantiate | quote }}
+              value: {{ .Values.instantiate | quote }}
             - name: NATS_EVENT_URL
-              value: {{ .Values.cirrina.natsEventUrl | quote }}
+              value: {{ .Values.natsEventUrl | quote }}
             - name: NATS_CONTEXT_URL
-              value: {{ .Values.cirrina.natsContextUrl | quote }}
-{{- if .Values.cirrina.extraEnvVars }}
-{{- toYaml .Values.cirrina.extraEnvVars | nindent 12 }}
+              value: {{ .Values.natsContextUrl | quote }}
+{{- if .Values.extraEnvVars }}
+{{- toYaml .Values.extraEnvVars | nindent 12 }}
 {{- end }}
