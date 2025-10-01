@@ -20,8 +20,8 @@ spec:
     spec:
       containers:
         - name: cirrina
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: IfNotPresent
+          image: marlonetheredgeuibk/cirrina:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: APP_PATH
               value: {{ .Values.appPath | quote }}
